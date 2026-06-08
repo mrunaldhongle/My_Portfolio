@@ -1,69 +1,16 @@
-# Harsh Rahul Meshram - Personal Portfolio
+# React + Vite
 
-A modern, highly responsive, and interactive personal portfolio website showcasing my skills, projects, and experiences in Artificial Intelligence, Data Science, Web Development, and Digital Marketing.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Features
+Currently, two official plugins are available:
 
-- **Modern UI/UX**: Designed with a premium, sleek aesthetic featuring glassmorphism and gradient glows.
-- **Dark Mode Support**: Seamless toggle between light and dark themes.
-- **Smooth Animations**: Powered by Framer Motion for scroll-reveals, hover effects, and page transitions.
-- **Responsive Layout**: Fully optimized for mobile, tablet, and desktop viewing.
-- **Dynamic Content**: Sections for Domains (Services), Education, Extracurriculars, Projects, and an expandable Gallery for Blogs and Achievements.
-- **Interactive Navbar**: Features a live-search system to quickly find specific pages, skills, or portfolio items.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🛠️ Tech Stack
+## React Compiler
 
-- **Frontend Framework**: [React.js](https://reactjs.org/) (built with Vite)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Routing**: [React Router v6](https://reactrouter.com/)
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📂 Project Structure
+## Expanding the ESLint configuration
 
-```text
-src/
-├── assets/         # Static assets (images, pdfs, logos)
-├── components/     # Reusable UI components (Navbar, Footer, Cards, ThemeToggle)
-├── data/           # Centralized mock data (portfolioData.js)
-├── pages/          # Main route components (Home, About, Services, Gallery, Contact)
-├── App.jsx         # Main application routing
-└── index.css       # Global styles and Tailwind directives
-```
-
-## 💻 Getting Started
-
-Follow these instructions to get a copy of the project up and running on your local machine.
-
-### Prerequisites
-- Node.js (v16.0 or higher)
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/harshrmeshram/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **View in browser**
-   Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-## 📬 Contact
-
-- **Name**: Harsh Rahul Meshram
-- **Email**: harshr.meshram@gmail.com
-- **LinkedIn**: [harshrmeshram](https://www.linkedin.com/in/harshrmeshram)
-- **GitHub**: [harshrmeshram](https://github.com/harshrmeshram)
-- **Instagram**: [@harshr.meshram](https://www.instagram.com/harshr.meshram)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

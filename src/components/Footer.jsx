@@ -1,210 +1,110 @@
 import { motion } from 'framer-motion'
-import { FiArrowUp, FiMail, FiPhone } from 'react-icons/fi'
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FiArrowUp, FiMail, FiMapPin } from 'react-icons/fi'
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
+
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Contact', href: '/contact' },
+]
+
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mrunal-dhongle/', icon: FaLinkedin },
+  { label: 'GitHub', href: 'https://github.com/mrunaldhongle', icon: FaGithub },
+  { label: 'Instagram', href: 'https://www.instagram.com/mrunal_dhongle/', icon: FaInstagram },
+]
+
+const contactInfo = [
+  { icon: FiMail, label: 'dhonglemrunal@gmail.com', href: 'mailto:mrunal.dhongle@example.com' },
+  { icon: FiMapPin, label: 'Nagpur, India', href: 'https://www.google.com/maps' },
+]
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
-  // Scroll to top smoothly
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
-
-  const footerSections = [
-    {
-      title: 'Quick Links',
-      links: [
-        { label: 'Home', href: '/' },
-        { label: 'Services', href: '/services' },
-        { label: 'About Me', href: '/about' },
-        { label: 'Gallery', href: '/gallery' },
-      ],
-    },
-    {
-      title: 'Services',
-      links: [
-        { label: 'Web Development', href: '#' },
-        { label: 'AI & Data Analytics', href: '#' },
-        { label: 'Design & Marketing', href: '#' },
-        { label: 'Consultation', href: '#' },
-      ],
-    },
-    {
-      title: 'Social Media',
-      links: [
-        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/harshrmeshram', icon: FaLinkedin },
-        { label: 'GitHub', href: 'https://github.com/harshrmeshram', icon: FaGithub },
-        { label: 'Twitter', href: 'https://x.com/harshr_meshram', icon: FaTwitter },
-        { label: 'Instagram', href: 'https://www.instagram.com/harshr.meshram', icon: FaInstagram },
-        
-
-      ],
-    },
-  ]
-
-  const contactInfo = [
-    { icon: FiMail, label: 'harshr.meshram@gmail.com', href: 'mailto:[EMAIL_ADDRESS]' },
-    { icon: FiPhone, label: '+91-82754 41457', href: 'tel:+918275441457' },
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  }
-
   return (
-    <footer className="relative mt-5 pt-0 border-t border-slate-200/20 dark:border-slate-800/50 bg-gradient-to-b from-slate-50/50 via-white/30 to-slate-100/50 dark:from-slate-950/50 dark:via-slate-900/30 dark:to-slate-950/50">
-      {/* Gradient top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-slate-200 dark:bg-slate-800"></div>
-
-      {/* Animated background elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl opacity-50"></div>
-      </div>
-
-      {/* Main Footer Content */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 pt-16 pb-6 md:pt-20 md:pb-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12"
-        >
-          {/* Brand Section */}
-          <motion.div variants={itemVariants} className="col-span-2 md:col-span-1">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Harsh
-            </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-justify">
-              BTech in AI & Data Science with skills in Python, full-stack development, and data analytics.
+    <footer className="relative overflow-hidden border-t border-slate-200/50 bg-[#f1f0ed] dark:border-[#553c2d] dark:bg-[#241810]">
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#6F4E37] via-[#8e6b56] to-[#c6b59f] opacity-90" />
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8">
+        <div className="grid gap-10 lg:grid-cols-3">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-4"
+          >
+            <h3 className="text-2xl font-bold text-slate-950 dark:text-slate-100">Mrunal Dhongle</h3>
+            <p className="max-w-md text-sm leading-7 text-slate-600 dark:text-slate-400 text-justify">
+              I am a software developer who builds responsive web applications and AI-enhanced products. My focus is on thoughtful UI, reliable architecture, and clean engineering that supports real businesses.
             </p>
           </motion.div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section, idx) => (
-            <motion.div
-              key={section.title}
-              variants={itemVariants}
-              className={section.title === 'Social Media' ? 'col-span-2 md:col-span-1' : ''}
-            >
-              <h4 className="font-semibold text-slate-900 dark:text-white mb-4">
-                {section.title}
-              </h4>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="grid grid-cols-2 gap-6"
+          >
+            <div>
+              <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">Quick Links</h4>
+              <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                {quickLinks.map((link) => (
                   <li key={link.label}>
-                    <motion.a
-                      href={link.href}
-                      whileHover={{ x: 4 }}
-                      className="flex items-center gap-2 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition text-sm"
-                    >
-                      {link.icon && <link.icon className="w-4 h-4" />}
+                    <a href={link.href} className="transition hover:text-slate-900 dark:hover:text-white">
                       {link.label}
-                    </motion.a>
+                    </a>
                   </li>
                 ))}
               </ul>
-            </motion.div>
-          ))}
+            </div>
+            <div>
+              <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">Social</h4>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-900 transition hover:border-slate-300 hover:bg-slate-100 dark:border-[#3f2a22] dark:bg-[#362518] dark:text-slate-100"
+                    aria-label={link.label}
+                  >
+                    <link.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
 
-          {/* Contact Info */}
-          <motion.div variants={itemVariants} className="col-span-2 md:col-span-1">
-            <h4 className="font-semibold text-slate-900 dark:text-white mb-4">
-              Contact
-            </h4>
-            <div className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="space-y-4"
+          >
+            <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">Get in touch</h4>
+            <div className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
               {contactInfo.map((item) => {
                 const Icon = item.icon
                 return (
-                  <motion.a
-                    key={item.label}
-                    href={item.href}
-                    whileHover={{ x: 4 }}
-                    className="flex items-center gap-3 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition text-sm"
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span className="line-clamp-1">{item.label}</span>
-                  </motion.a>
+                  <a key={item.label} href={item.href} className="flex items-center gap-3 transition hover:text-slate-900 dark:hover:text-white">
+                    <Icon className="h-4 w-4" />
+                    {item.label}
+                  </a>
                 )
               })}
             </div>
           </motion.div>
-        </motion.div>
+        </div>
 
-        {/* Divider */}
-        <motion.div
-          variants={itemVariants}
-          className="h-px bg-gradient-to-r from-transparent via-slate-300/50 dark:via-slate-700/50 to-transparent my-8"
-        ></motion.div>
-
-        {/* Bottom Section */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 items-center gap-6 text-center md:text-left"
-        >
-          {/* Empty div to balance the grid on desktop */}
-          <div className="hidden md:block"></div>
-
-          {/* Copyright */}
-          <motion.p
-            variants={itemVariants}
-            className="text-sm text-slate-600 dark:text-slate-400 text-center"
-          >
-            <span className="font-semibold">© {currentYear} harshr.meshram</span>
-            {' '}All rights reserved.
-          </motion.p>
-
-          {/* Right Section */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col items-center md:items-end gap-3 md:justify-self-end"
-          >
-            {/* Scroll to Top Button */}
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{
-                scale: 1.1,
-                boxShadow: '0 0 20px rgba(56, 189, 248, 0.4)',
-              }}
-              whileTap={{ scale: 0.9 }}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-slate-100 hover:bg-slate-700 dark:hover:bg-slate-200 text-white dark:text-slate-900 text-sm font-semibold transition shadow-lg"
-            >
-              <FiArrowUp className="w-4 h-4" />
-              <span>Back to Top</span>
-            </motion.button>
-
-            <p className="text-xs text-slate-500 dark:text-slate-500 font-medium tracking-wide">
-              Designed by Mrunal Dhongle
-            </p>
-          </motion.div>
-        </motion.div>
+        <div className="mt-12 border-t border-slate-200/50 pt-6 text-center text-sm text-slate-500 dark:border-[#553c2d] dark:text-slate-400">
+          © {currentYear} Mrunal Dhongle. All Rights Reserved.
+        </div>
       </div>
-
-      {/* Bottom glow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-slate-200 dark:bg-slate-800 opacity-50"></div>
     </footer>
   )
 }
