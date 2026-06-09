@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowUp, FiMail, FiMapPin } from 'react-icons/fi'
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 
 const quickLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 const socialLinks = [
@@ -53,9 +54,9 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="transition hover:text-slate-900 dark:hover:text-white">
+                    <Link to={link.to} className="transition hover:text-slate-900 dark:hover:text-white">
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
