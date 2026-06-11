@@ -105,7 +105,7 @@ export const aboutDetails = {
   aboutMe: {
     title: "Hi, I'm Mrunal Dhongle",
     description: [
-      "I am a Software Developer with a strong foundation in Computer Science and a keen interest in Web Technologies. Currently pursuing B.Tech in Computer Science & Engineering, with hands-on experience in full-stack development, projects, and internships.",
+      "I am a Software Developer with a strong foundation in Computer Science and a keen interest in Web Technologies. Currently Completed B.Tech in Computer Science & Engineering, with hands-on experience in full-stack development, projects, and internships.",
     ]
   },
   summary:
