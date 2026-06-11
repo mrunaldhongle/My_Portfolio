@@ -6,7 +6,7 @@ import { featuredProjects, contactInfo } from '../data/portfolioData'
 export default function Projects() {
   return (
     <main className="bg-[#f0efec] text-slate-950 transition-colors duration-300 dark:bg-[#25150f] dark:text-slate-100 min-h-screen pb-20">
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10">
         <SectionTitle title="Projects" subtitle="Featured work" />
 
         <div className="mt-10 grid gap-8 xl:grid-cols-2">

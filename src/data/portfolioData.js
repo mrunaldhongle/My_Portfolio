@@ -93,11 +93,11 @@ export const skillSections = [
   },
   {
     title: 'Programming',
-    skills: ['Python', 'Java', 'C++'],
+    skills: ['Python', 'C++'],
   },
   {
     title: 'Tools',
-    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Power BI'],
+    skills: ['Git', 'GitHub', 'VS Code'],
   },
 ]
 
