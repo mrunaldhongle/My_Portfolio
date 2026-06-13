@@ -9,7 +9,7 @@ import certificate2 from '../assets/Data_Analytics_Essential.png'
 import certificate3 from '../assets/Programming In Java.png'
 import certificate4 from '../assets/Design and Analysis of Algorithms.png'
 import certificate5 from '../assets/Machine learning.jpeg'
-import resumePdf from '../assets/Mrunal-Dhongle_resume.pdf'
+import resumePdf from '../assets/MrunalDhongle_resume.pdf'
 
 export const heroData = {
   name: 'Mrunal Dhongle',

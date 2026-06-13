@@ -3,7 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiMenu, FiX, FiDownload } from 'react-icons/fi'
 import ThemeToggle from './ThemeToggle'
-import resumePdf from '../assets/Mrunal-Dhongle_resume.pdf'
+import resumePdf from '../assets/MrunalDhongle_resume.pdf'
 
 const navLinks = [
   { label: 'Home', to: '/' },
