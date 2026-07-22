@@ -4,6 +4,7 @@ import project3 from '../assets/Projects/Linkhub.png'
 import project4 from '../assets/Projects/kribuddha.png'
 import project5 from '../assets/Projects/goat digital.png'
 import project6 from '../assets/Projects/job_portal.png'
+import project7 from '../assets/Projects/HR-EMS-PORTAL.png'
 import certificate1 from '../assets/Iee conference.jpeg'
 import certificate2 from '../assets/Data_Analytics_Essential.png'
 import certificate3 from '../assets/Programming In Java.png'
@@ -28,6 +29,14 @@ export const aboutPreview = {
 }
 
 export const featuredProjects = [
+   {
+    title: 'HR-EMS-PORTAL',
+    description: 'A modern Human Resource Management System (HRMS) built with Angular, featuring Employee, Department, Leave, Dashboard Analytics, Reports, Attendance, and centralized CRUD operations.',
+    image: project7,
+    tech: ['Angular', 'TypeScript', 'JSON'],
+    github: 'https://github.com/mrunaldhongle/HR-EMS-PORTAL',
+    live: 'https://hr-ems-portal.vercel.app',
+  },
   {
     title: 'AI-Based Carreer Predictor & Resume Builder',
     description: 'An AI-powered tool for predicting career paths and building professional resumes.',
